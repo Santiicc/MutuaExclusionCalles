@@ -14,9 +14,9 @@ import java.util.concurrent.Semaphore;
 *                 ↓
 *
 *   semaforo1    |a |
-	             |u |
-	             |t |
-	             |o |
+	         |u |
+	         |t |
+	         |o |
  ----------------   ---------------
             auto             auto           Semaforo2
 -----------------   ---------------
@@ -87,24 +87,34 @@ class Calles_Cruzadas extends JPanel {
         super.paintComponent(g);
         g.setColor(Color.GRAY); // Fondo gris
         g.fillRect(0, 0, getWidth(), getHeight());
+	//Calles
         g.setColor(Color.BLACK);
         g.fillRect(0,200,getWidth(),50);
+	//Calles
         g.setColor(Color.BLACK);
         g.fillRect(0,220,getWidth(),50);
+	//Calles
         g.setColor(Color.BLACK);
         g.fillRect(720,10,50,1000);
+	//Calles
         g.setColor(Color.BLACK);
         g.fillRect(700,10,50,1000);
+	//Configuro tamaño y posiciones del Semaforo
         g.setColor(semaforo1Verde ? Color.GREEN : Color.RED);
         g.fillRect(1500, 100, 30, 100);
+	//Configuro tamaño y posiciones del Semaforo
         g.setColor(semaforo2Verde ? Color.GREEN : Color.RED);
         g.fillRect(600, 10, 100, 30);
+	//Configuro tamaño y posiciones iniciales auto horizontal 
         g.setColor(Color.BLUE);
         g.fillRect(auto1Pos, 200, 50, 30);
+	//Configuro tamaño y posiciones iniciales auto vertical
         g.setColor(Color.ORANGE);
         g.fillRect(700, auto2Pos, 30, 50);
+	//Configuro tamaño y posiciones iniciales auto horizontal
         g.setColor(Color.red);
         g.fillRect(auto3pos, 240, 50, 30);
+	//Configuro tamaño y posiciones iniciales auto vertical
         g.setColor(Color.magenta);
         g.fillRect(740, auto4pos, 30, 50);
     }
